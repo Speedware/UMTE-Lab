@@ -1,0 +1,440 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---------- Шрифты ---------- */
+@font-face {
+  font-family: 'Logo text';
+  src: url('./fonts/vivl-rail.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Title';
+  src: url('./fonts/Deledda Open Regular.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Subtitle';
+  src: url('./fonts/Bajazzo-ExpSmbd.otf') format('opentype');
+}
+
+
+body, h1, h2, h3, h4, p {
+  font-weight: normal;
+  font-size: 100%;
+}
+
+body {
+  min-width: 850px;
+  font-family: 'Open Sans', Arial, sans-serif;
+  background-color: rgb(232, 225, 238);
+}
+
+/* ---------- Полоска меню ---------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  background-color: rgb(250, 250, 250);
+  height: 50px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-img {
+  display: inline-block;
+  height: 30px;
+
+  vertical-align: middle;
+}
+
+.navbar-content {
+  display: inline-flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-content li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.navbar-content a {
+  color: #333;
+  text-decoration: none;
+}
+
+.navbar-content a:hover {
+  color: #a559c9;
+  text-decoration: none;
+}
+
+/* ---------- Шапка ---------- */
+.header {
+  height: calc(100vh - 50px);
+  text-align: center;
+  background-color: #eee;
+  background-image: url(./img/img_background_1.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.header-title {
+  font-family: 'Logo text';
+  color: white;
+  max-width: 1300px;
+  font-weight: 800;
+  font-size: 47px;
+  text-transform: uppercase;
+  text-shadow: 1px 3px 6px rgb(0 0 0 / 0.9);
+}
+
+.header-subtitle {
+  font-family: 'subtitle';
+  color: white;
+  max-width: 1300px;
+  font-weight: 800;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-shadow: 1px 3px 6px rgb(0 0 0 / 0.9);
+}
+
+.header-content {
+  margin: auto;
+}
+
+.header-button {
+  cursor: pointer;
+  padding: 5px;
+  border: none;
+  margin-top: 20px;
+  width: 200px;
+  height: 70px;
+  border-radius: 15px;
+  font-size: 18px;
+}
+
+.header-button a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.overlay {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 50px);
+  background-color: rgba(52, 39, 73, 0.5);
+}
+
+/* ---------- Контент ---------- */
+.section-title-text {
+  font-family: 'Title';
+  text-align: center;
+  padding-bottom: 50px;
+  margin: auto;
+  color: black;
+  font-weight: 500;
+  font-size: 60px;
+}
+
+.section-title-text2 {
+  font-family: 'Title';
+  text-align: center;
+  padding-bottom: 50px;
+  margin: auto;
+  color: black;
+  font-weight: 500;
+  font-size: 60px;
+  max-width: 800px;
+}
+
+.content {
+  /* Отступ для якоря */
+  scroll-margin-top: 70px;
+  margin: 70px auto 150px;
+  font-size: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
+.row {
+  gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 370px);
+  grid-template-rows: 600px;
+  justify-content: center;
+}
+
+.card {
+  display: inline-block;
+  width: 370px;
+  height: 600px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  border: 1px solid black;
+  padding: 25px 25px 30px;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.6);
+  background-color:rgb(241, 241, 241);
+}
+
+.no-right-margin {
+  margin-right: 0;
+}
+
+.card-title {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 31px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.card-text {
+  font-size: 18px;
+}
+
+.card-image {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid black;
+}
+
+.minimal {
+  display: inline-block;
+  width: 300px;
+  height: 130px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  border: 0;
+  padding: 25px 25px 30px;
+  box-shadow: none;
+  background-image: none;
+  background-color: rgb(252, 225, 238);
+}
+
+/* ---------- Контент 2 ---------- */
+.list {
+  gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 700px);
+  grid-template-rows: 100px;
+  justify-content: center;
+}
+
+/* БЛОК Предложения по организации работы на месяц */
+.suggestions {
+  margin-bottom: 150px;
+}
+
+.suggestions-title {
+  font-family: 'Title';
+  text-align: center;
+  padding-bottom: 10px;
+  margin: auto;
+  color: black;
+  font-weight: 500;
+  font-size: 60px;
+}
+
+.suggestions-description {
+  margin: 0 auto;
+  width: 1000px;
+  font-size: 19px;
+  text-align: center;
+  padding-bottom: 10px;
+  font-weight: 400;
+}
+
+.suggestions-block {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.suggestions-block-item {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.suggestions-block-item-point {
+  position: relative;
+  margin-bottom: 16px;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.suggestions-block-item-point::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -17px;
+  border-radius: 100%;
+  background-color: rgb(112, 70, 180);
+  width: 8px;
+  height: 8px;
+}
+
+/* БЛОК Start-up как выпускная квалификационная работа */
+.startup {
+  margin-bottom: 150px;
+}
+
+.startup-title {
+  font-family: 'Title';
+  text-align: center;
+  padding-bottom: 10px;
+  margin: auto;
+  color: black;
+  font-weight: 500;
+  font-size: 60px;
+}
+
+.startup-description {
+  margin: 0 auto;
+  width: 1000px;
+  font-size: 19px;
+  text-align: center;
+  padding-bottom: 10px;
+  font-weight: 400;
+}
+
+.startup-block {
+  margin: 0 auto;
+  margin-top: 24px;
+  width: 728px;
+}
+
+.startup-block-item {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.startup-block-item-icon {
+  background: rgb(112, 70, 180);
+  width: 60px;
+  min-width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: white;
+  font-size: 2rem;
+}
+
+.startup-block-item:not(:last-child) .startup-block-item-icon::after {
+  content: "\2193";
+  position: absolute;
+  font-size: 32px;
+  font-weight: 700;
+  color: rgb(112, 70, 180);
+  bottom: -45px;
+}
+
+.startup-block-item-content h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+
+/* БЛОК Маршрут открытия проектного офиса */
+.route-block {
+  width: 100%;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 330px);
+  grid-template-rows: repeat(auto-fit, 330px);
+  grid-auto-columns: 330px;
+  grid-auto-rows: 330px;
+  gap: 20px;
+}
+
+.route-block-item {
+  width: 330px;
+  height: 330px;
+}
+
+.route-block-item-title {
+  font-weight: 700;
+  color: rgb(112, 70, 180);
+  font-size: 4.6rem;
+  line-height: 1.1;
+}
+
+.route-block-item-date {
+  font-weight: bold;
+  font-size: 2.2rem;
+  line-height: 1.5;
+}
+
+.route-block-item-description {
+  color: #000000;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* ---------- Подвал ---------- */
+.footer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2e1e4d;
+}
+
+.footer-author {
+  color: white;
+  font-weight: 800;
+  font-size: 25px;
+}
+
+.footer-social {
+  margin-top: 5px;
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .footer-social {
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.footer-address {
+  margin-top: 15px;
+  color: white;
+  font-weight: 400;
+  font-size: 18px;
+}
